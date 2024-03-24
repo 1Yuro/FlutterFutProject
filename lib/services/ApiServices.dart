@@ -7,7 +7,6 @@ class ApiServices
   static String KullaniciListeleURL="http://26.110.79.203:7105/Kullanici/Listele";
   static String KullaniciKayitURL="http://26.110.79.203:7105/Kullanici/Kayit";
   static String TakimlariGetirURL="http://26.110.79.203:7105/LigTablosu/TakimlariGetir";
-  // Lig tablosu çekme işlemi Finalden sonra ekledim.
   static Future getLigTablosu() async {
   final response = await http.get(Uri.parse(TakimlariGetirURL));
 
@@ -19,7 +18,7 @@ class ApiServices
   }
   return response.body;
 }
-  // Final ödevinden önceki bölümler.
+
   static Future<bool> KullaniciKayit(Kullanici kul)async 
   {
     var kulMap = kul.toMap();
